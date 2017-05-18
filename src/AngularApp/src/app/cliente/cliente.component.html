@@ -1,0 +1,11 @@
+<p>
+  Clientes
+</p>
+<p>
+  <a  routerLink="/cliente/novo" >Novo</a>
+</p>
+<ul>
+  <li routerLink="/cliente/{{model.id}}" *ngFor="let model of Models">
+   <a> {{model.nome}}</a>
+  </li>
+</ul>

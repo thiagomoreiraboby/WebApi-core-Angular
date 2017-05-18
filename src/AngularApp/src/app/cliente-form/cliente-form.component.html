@@ -1,0 +1,21 @@
+          <form (ngSubmit)="submitComment()">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="model.nome" name="nome">
+                </div>
+                 <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="email" class="form-control" placeholder="email@email.com" [(ngModel)]="model.email" name="email">
+                </div>
+                 <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="password" class="form-control" placeholder="senha" [(ngModel)]="model.senha" name="senha">
+                </div>
+             
+                <button *ngIf="!editing" type="submit" class="btn btn-primary btn-block">Add</button>
+                <button *ngIf="editing" type="submit" class="btn btn-warning btn-block">Update</button>
+               <a routerLink="/cliente">Voltar</a>
+            </div>
+        </form>
+
